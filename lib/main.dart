@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hornblasters/UI/home/home.dart';
 
 import 'UI/constants.dart';
 import 'UI/splashscreen/splashscreen.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       getPages: [
         GetPage(name: '/SplashScreen', page: () => const SplashScreen()),
-        // GetPage(name: '/HomeScreen', page: () => HomeScreen()),
+        GetPage(name: '/HomeScreen', page: () => const HomeScreen()),
       ],
       debugShowCheckedModeBanner: false,
       title: 'HornBlasters',

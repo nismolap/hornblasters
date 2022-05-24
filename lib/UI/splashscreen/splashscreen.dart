@@ -14,15 +14,15 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  // void initState() {
-  //   super.initState();
-  //
-  //   Timer(Duration(seconds: 4), () async{
-  //     Get.offNamed('/HomeScreen');
-  //     mydatabase.getisversion();
-  //   });
-  // }
+  void initState() {
+    super.initState();
 
+    Timer(const Duration(seconds: 3), () async{
+      Get.offNamed('/HomeScreen');
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -46,28 +46,23 @@ class _SplashScreenState extends State<SplashScreen> {
                 Container(
                   padding: const EdgeInsets.all(50),
                 ),
-                Image.asset(
-                  "assets/images/logo.png",
-                  height: 174.0,
-                  width: 300.0,
+                Row(
+                  children: [
+                    Expanded(flex: 1,child: Container(),),
+                    Expanded(flex: 10,child: Image.asset(
+                      "assets/images/logo.png",
+                    ),),
+                    Expanded(flex: 1,child: Container(),),
+                  ],
                 ),
+                Container(height: 20,),
                 const Text(
-                  "Don't Blow Your Temper",
+                  'Horn Blasters',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                     color: P5,
                     fontSize: 30.0,
-                  ),
-                ),
-                Container(height: 10,),
-                const Text(
-                  'Blow Your Horns!',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: P5,
-                    fontSize: 22.0,
                   ),
                 ),
               ],
