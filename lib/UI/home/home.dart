@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hornblasters/UI/constants.dart';
 import 'package:hornblasters/UI/header.dart';
+import 'package:hornblasters/UI/home/buttons.dart';
+import 'package:hornblasters/UI/home/footer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,36 +30,22 @@ class HomeScreen extends StatelessWidget {
           children: [
             Container(height: 20,),
             const Header(),
-            Row(
+            Expanded(child: Column(
               children: [
-                Expanded(flex:1,child: Container()),
-                Expanded(flex:10,child: Column(
+                Expanded(child: Row(
                   children: [
-                    Row(
+                    Expanded(flex:1,child: Container()),
+                    Expanded(flex:10,child: Column(
                       children: [
-                        Expanded(child: ElevatedButton(
-                          onPressed: (){},
-                          style: ElevatedButton.styleFrom(
-                            primary : P1,
-                            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                            onPrimary: P3,
-                            shadowColor: S1,
-                            elevation: 8,
-                          ),
-                          child: const Text('HORN SOUNDS',style: TextStyle(
-                            fontStyle: FontStyle.italic,
-                            color: P5,
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.w800
-                          ),),
-                        )),
+                        const Expanded(flex:6,child: Buttons()),
+                        Expanded(flex:2,child: Footer()),
                       ],
-                    ),
+                    )),
+                    Expanded(flex:1,child: Container()),
                   ],
-                )),
-                Expanded(flex:1,child: Container()),
+                ),)
               ],
-            ),
+            ))
           ],
         ),
       ),
