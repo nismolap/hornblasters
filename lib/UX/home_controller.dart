@@ -7,6 +7,11 @@ import 'package:url_launcher/url_launcher.dart';
 
 class HomeController extends GetxController{
 
+  //Buttons URL
+  final SHOP_NOW = 'https://hornblasters.com' ;
+  final DEALER_INSTALLER_LOCATOR = 'https://hornblasters.com/pages/dealer-installer-locator' ;
+  final HELP_CENTER = 'https://hornblasters.com/pages/help-center' ;
+
   //Social Media Links
   final Twitter = 'https://twitter.com/intent/user?screen_name=hornblasters' ;
   final Facebook = 'https://facebook.com/hornblasters' ;
@@ -16,8 +21,9 @@ class HomeController extends GetxController{
   final Snapchat = 'https://www.snapchat.com/add/hornblasters' ;
 
   //Phone Number
-  final Call_Toll_Free = 'tel:+1-877-209-8179';
-  final International = 'tel:+1-813-783-8058';
+  final Call_Toll_Free = 'tel:+1-877-209-8179' ;
+  final International = 'tel:+1-813-783-8058' ;
+
 
   void follow_us(){
     Get.defaultDialog(

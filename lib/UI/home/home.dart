@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                     Expanded(flex:1,child: Container()),
                     Expanded(flex:10,child: Column(
                       children: [
-                        const Expanded(flex:6,child: Buttons()),
+                        Expanded(flex:6,child: Buttons()),
                         Expanded(flex:2,child: Footer()),
                       ],
                     )),

@@ -1,8 +1,14 @@
+// ignore_for_file: must_be_immutable, deprecated_member_use
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hornblasters/UI/constants.dart';
+import 'package:hornblasters/UX/home_controller.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Buttons extends StatelessWidget {
-  const Buttons({Key? key}) : super(key: key);
+  HomeController controller = Get.put(HomeController());
+  Buttons({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -51,7 +57,9 @@ class Buttons extends StatelessWidget {
         Row(
           children: [
             Expanded(child: ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                launch(controller.SHOP_NOW);
+              },
               style: ElevatedButton.styleFrom(
                 primary : P1,
                 padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
@@ -71,7 +79,9 @@ class Buttons extends StatelessWidget {
         Row(
           children: [
             Expanded(child: ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                launch(controller.DEALER_INSTALLER_LOCATOR);
+              },
               style: ElevatedButton.styleFrom(
                 primary : P1,
                 padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
@@ -91,7 +101,9 @@ class Buttons extends StatelessWidget {
         Row(
           children: [
             Expanded(child: ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                launch(controller.HELP_CENTER);
+              },
               style: ElevatedButton.styleFrom(
                 primary : P1,
                 padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
