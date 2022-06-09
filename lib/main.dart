@@ -20,10 +20,6 @@ class MyApp extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,
       title: 'HornBlasters',
-      theme: ThemeData(
-        fontFamily: 'AlternateGot',
-        primaryColor: P1,
-      ),
       home: const SplashScreen(),
     );
   }

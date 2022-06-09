@@ -79,6 +79,9 @@ flutter:
     - family: AlternateGot
       fonts:
         - asset: assets/fonts/AlternateGotNo3D.ttf
+    - family: GaleanaCondensed
+      fonts:
+        - asset: assets/fonts/GaleanaCondensed-HeavyIt.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

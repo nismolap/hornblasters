@@ -39,45 +39,38 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Column(
+            Expanded(child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Container(
-                  padding: const EdgeInsets.all(50),
-                ),
                 Row(
-                  children: [
-                    Expanded(flex: 1,child: Container(),),
-                    Expanded(flex: 10,child: Image.asset(
-                      "assets/images/logo.png",
-                    ),),
-                    Expanded(flex: 1,child: Container(),),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text('HB',style: TextStyle(
+                      fontFamily: 'GaleanaCondensed',
+                        fontSize: 184,
+                        color: P5
+                    ),)
                   ],
                 ),
-                Container(height: 20,),
-                const Text(
-                  'Horn Blasters',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: P5,
-                    fontSize: 30.0,
+              ],
+            ),),
+            Expanded(child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(bottom: 25),
+                  child: const Text(
+                    'Version 1.0',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: P5,
+                      fontSize: 11.0,
+                    ),
                   ),
                 ),
               ],
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 200),
-              child: const Text(
-                'Version 1.0',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: P5,
-                  fontSize: 11.0,
-                ),
-              ),
-            )
+            )),
           ],
         ),
       ),
