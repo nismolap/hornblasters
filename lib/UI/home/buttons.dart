@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hornblasters/UI/constants.dart';
 import 'package:hornblasters/UX/home_controller.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:hornblasters/UX/webview_controller.dart';
 
 class Buttons extends StatelessWidget {
   HomeController controller = Get.put(HomeController());
+  WebviewController webview = Get.put(WebviewController());
 
   Buttons({Key? key}) : super(key: key);
 
@@ -173,7 +174,9 @@ class Buttons extends StatelessWidget {
             ],
           ),
           child: ElevatedButton(
-            onPressed: () {launch(controller.SHOP_NOW);},
+            onPressed: () {
+              webview.webview(controller.SHOP_NOW,'SHOP NOW');
+              },
             style: ElevatedButton.styleFrom(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
@@ -242,7 +245,9 @@ class Buttons extends StatelessWidget {
             ],
           ),
           child: ElevatedButton(
-            onPressed: () {launch(controller.DEALER_INSTALLER_LOCATOR);},
+            onPressed: () {
+              webview.webview(controller.DEALER_INSTALLER_LOCATOR,'DEALER / INSTALLER\nLOCATOR');
+            },
             style: ElevatedButton.styleFrom(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
@@ -311,7 +316,9 @@ class Buttons extends StatelessWidget {
             ],
           ),
           child: ElevatedButton(
-            onPressed: () {launch(controller.HELP_CENTER);},
+            onPressed: () {
+              webview.webview(controller.HELP_CENTER,'HELP CENTER');
+            },
             style: ElevatedButton.styleFrom(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
