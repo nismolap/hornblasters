@@ -6,6 +6,7 @@ import 'package:hornblasters/UI/home/footer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,22 +29,29 @@ class HomeScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Container(height: 20,),
+            Container(
+              height: 20,
+            ),
             const Header(),
-            Expanded(child: Column(
+            Expanded(
+                child: Column(
               children: [
-                Expanded(child: Row(
-                  children: [
-                    Expanded(flex:2,child: Container()),
-                    Expanded(flex:9,child: Column(
-                      children: [
-                        Expanded(flex:6,child: Buttons()),
-                        Expanded(flex:2,child: Footer()),
-                      ],
-                    )),
-                    Expanded(flex:2,child: Container()),
-                  ],
-                ),)
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(flex: 2, child: Container()),
+                      Expanded(
+                          flex: 9,
+                          child: Column(
+                            children: [
+                              Expanded(flex: 6, child: Buttons()),
+                              Expanded(flex: 2, child: Footer()),
+                            ],
+                          )),
+                      Expanded(flex: 2, child: Container()),
+                    ],
+                  ),
+                )
               ],
             ))
           ],
