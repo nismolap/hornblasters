@@ -82,6 +82,9 @@ flutter:
     - family: GaleanaCondensed
       fonts:
         - asset: assets/fonts/GaleanaCondensed-HeavyIt.otf
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

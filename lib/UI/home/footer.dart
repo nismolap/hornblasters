@@ -23,35 +23,45 @@ class Footer extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     primary : P2,
-                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 15),
                     onPrimary: P3,
                     shadowColor: S1,
                     elevation: 8,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      )
                   ),
-                  child: const Text('FOLLOW US',style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      color: P5,
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w800
-                  ),),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      Icon(Icons.favorite,color: P5,size: 30,),
+                      Text('FOLLOW US',style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        color: P5,
+                        fontSize: 20.0,
+                      ),),
+                    ],
+                  ),
                 ),
-                Container(height: 10,),
+                Container(height: 15,),
                 ElevatedButton(
                   onPressed: (){
                     controller.call_toll_free();
                   },
                   style: ElevatedButton.styleFrom(
-                    primary : P2,
-                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                    onPrimary: P3,
-                    shadowColor: S1,
-                    elevation: 8,
+                      primary : P2,
+                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 15),
+                      onPrimary: P3,
+                      shadowColor: S1,
+                      elevation: 8,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      )
                   ),
                   child: const Text('Phone Number',style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      color: P5,
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w800
+                    fontFamily: 'Montserrat',
+                    color: P5,
+                    fontSize: 20.0,
                   ),),
                 ),
               ],

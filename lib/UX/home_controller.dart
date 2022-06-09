@@ -225,19 +225,12 @@ class HomeController extends GetxController{
                 primary: P2,
                 onPrimary: P3,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.phone,size: 25,color: P5,),
-                  Container(width: 10,),
-                  const Text('Call Toll Free',style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      color: P5,
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w800
-                  ),)
-                ],
-              ),
+              child: const Text('Call Toll Free',style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  color: P5,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.w800
+              ),),
             ),
           ),
           //International
@@ -253,19 +246,12 @@ class HomeController extends GetxController{
                 primary: P2,
                 onPrimary: P3,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.phone,size: 25,color: P5,),
-                  Container(width: 10,),
-                  const Text('International',style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      color: P5,
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w800
-                  ),)
-                ],
-              ),
+              child: const Text('International',style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  color: P5,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.w800
+              ),),
             ),
           ),
         ],

@@ -8,118 +8,358 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Buttons extends StatelessWidget {
   HomeController controller = Get.put(HomeController());
+
   Buttons({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Row(
-          children: [
-            Expanded(child: ElevatedButton(
-              onPressed: (){},
-              style: ElevatedButton.styleFrom(
-                primary : P1,
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                onPrimary: P3,
-                shadowColor: S1,
-                elevation: 8,
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: const LinearGradient(
+                colors: [
+                  P5,
+                  P2,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.7, 0.3]),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 0,
+                blurRadius: 10,
+                offset: const Offset(0, 6), // changes position of shadow
               ),
-              child: const Text('HORN SOUNDS',style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  color: P5,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800
-              ),),
-            )),
-          ],
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                primary: Colors.transparent,
+                shadowColor: Colors.transparent,
+                onPrimary: P2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                )),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'HORN SOUNDS',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          color: P2,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    flex: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 25,
+                        ),
+                        const Icon(
+                          Icons.notifications_active,
+                          color: P5,
+                          size: 40,
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          ),
         ),
-        Row(
-          children: [
-            Expanded(child: ElevatedButton(
-              onPressed: (){},
-              style: ElevatedButton.styleFrom(
-                primary : P1,
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                onPrimary: P3,
-                shadowColor: S1,
-                elevation: 8,
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: const LinearGradient(
+                colors: [
+                  P5,
+                  P2,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.7, 0.3]),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 0,
+                blurRadius: 10,
+                offset: const Offset(0, 6), // changes position of shadow
               ),
-              child: const Text('VIDEOS & PICS',style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  color: P5,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800
-              ),),
-            )),
-          ],
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                primary: Colors.transparent,
+                shadowColor: Colors.transparent,
+                onPrimary: P2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                )),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'VIDEOS & PICS',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          color: P2,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    flex: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 25,
+                        ),
+                        const Icon(
+                          Icons.video_collection,
+                          color: P5,
+                          size: 40,
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          ),
         ),
-        Row(
-          children: [
-            Expanded(child: ElevatedButton(
-              onPressed: (){
-                launch(controller.SHOP_NOW);
-              },
-              style: ElevatedButton.styleFrom(
-                primary : P1,
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                onPrimary: P3,
-                shadowColor: S1,
-                elevation: 8,
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: const LinearGradient(
+                colors: [
+                  P5,
+                  P2,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.7, 0.3]),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 0,
+                blurRadius: 10,
+                offset: const Offset(0, 6), // changes position of shadow
               ),
-              child: const Text('SHOP NOW',style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  color: P5,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800
-              ),),
-            )),
-          ],
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: () {launch(controller.SHOP_NOW);},
+            style: ElevatedButton.styleFrom(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                primary: Colors.transparent,
+                shadowColor: Colors.transparent,
+                onPrimary: P2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                )),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'SHOP NOW',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          color: P2,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    flex: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 25,
+                        ),
+                        const Icon(
+                          Icons.shopping_cart,
+                          color: P5,
+                          size: 40,
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          ),
         ),
-        Row(
-          children: [
-            Expanded(child: ElevatedButton(
-              onPressed: (){
-                launch(controller.DEALER_INSTALLER_LOCATOR);
-              },
-              style: ElevatedButton.styleFrom(
-                primary : P1,
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                onPrimary: P3,
-                shadowColor: S1,
-                elevation: 8,
+
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: const LinearGradient(
+                colors: [
+                  P5,
+                  P2,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.7, 0.3]),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 0,
+                blurRadius: 10,
+                offset: const Offset(0, 6), // changes position of shadow
               ),
-              child: const Text('DEALER / INSTALLER LOCATOR',style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  color: P5,
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.w800
-              ),),
-            )),
-          ],
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: () {launch(controller.DEALER_INSTALLER_LOCATOR);},
+            style: ElevatedButton.styleFrom(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                primary: Colors.transparent,
+                shadowColor: Colors.transparent,
+                onPrimary: P2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                )),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                      'DEALER / INSTALLER\nLOCATOR',textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        color: P2,
+                        fontSize: 14.0,
+                      ),
+                        ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    flex: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 25,
+                        ),
+                        const Icon(
+                          Icons.location_on,
+                          color: P5,
+                          size: 40,
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          ),
         ),
-        Row(
-          children: [
-            Expanded(child: ElevatedButton(
-              onPressed: (){
-                launch(controller.HELP_CENTER);
-              },
-              style: ElevatedButton.styleFrom(
-                primary : P1,
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                onPrimary: P3,
-                shadowColor: S1,
-                elevation: 8,
+
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: const LinearGradient(
+                colors: [
+                  P5,
+                  P2,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.7, 0.3]),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 0,
+                blurRadius: 10,
+                offset: const Offset(0, 6), // changes position of shadow
               ),
-              child: const Text('HELP CENTER',style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  color: P5,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w800
-              ),),
-            )),
-          ],
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: () {launch(controller.HELP_CENTER);},
+            style: ElevatedButton.styleFrom(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                primary: Colors.transparent,
+                shadowColor: Colors.transparent,
+                onPrimary: P2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                )),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'HELP CENTER',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          color: P2,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    flex: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 25,
+                        ),
+                        const Icon(
+                          Icons.help,
+                          color: P5,
+                          size: 40,
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          ),
         ),
+
+
       ],
     );
   }
