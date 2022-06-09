@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hornblasters/UI/home/home.dart';
+import 'package:hornblasters/UI/horn_sounds/horn_sounds.dart';
 import 'package:hornblasters/UI/webview/webview.dart';
 import 'UI/splashscreen/splashscreen.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/SplashScreen', page: () => const SplashScreen()),
         GetPage(name: '/HomeScreen', page: () => const HomeScreen()),
         GetPage(name: '/WebView', page: () => WebViewP()),
+        GetPage(name: '/HornSounds', page: () => HornSounds()),
       ],
       debugShowCheckedModeBanner: false,
       title: 'HornBlasters',

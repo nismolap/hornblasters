@@ -38,7 +38,9 @@ class Buttons extends StatelessWidget {
             ],
           ),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed('HornSounds');
+            },
             style: ElevatedButton.styleFrom(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
