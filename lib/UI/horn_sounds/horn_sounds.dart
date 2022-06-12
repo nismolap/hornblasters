@@ -37,7 +37,7 @@ class HornSounds extends StatelessWidget {
                 Expanded(
                   child: GridView.count(
                     crossAxisCount: 3,
-                    childAspectRatio: (60 / 100),
+                    childAspectRatio: (70 / 100),
                     children: List.generate(5, (i) {
                       return Container(
                         margin: const EdgeInsets.all(5),
@@ -79,7 +79,7 @@ class HornSounds extends StatelessWidget {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Container(
-                                          height: 7,
+                                          height: 5,
                                         ),
                                         const Text(
                                           'HORN SOUNDS',
@@ -98,8 +98,10 @@ class HornSounds extends StatelessWidget {
                                               size: 40,
                                             )),
                                         Container(
-                                          width: 55,
-                                          height: 45,
+                                          width: 62,
+                                          height: 35,
+                                          margin:
+                                              const EdgeInsets.only(bottom: 5),
                                           decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(10),

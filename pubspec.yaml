@@ -36,6 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   url_launcher: ^6.0.20
+  webview_flutter: ^3.0.4
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
+  video_player: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -47,7 +52,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  webview_flutter: ^3.0.4
+
+#  flutter_simple_shopify: ^0.0.25-alpha
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

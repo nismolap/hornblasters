@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>243674717073-pa3kd8lduheudb8vgmfsqchf7p7jtf9o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.243674717073-pa3kd8lduheudb8vgmfsqchf7p7jtf9o</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>243674717073-omt1j4mumomcoo9vrhnuflg35qvd3kp5.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCaVy6RBJECPlt5dI8uuLWGgH-6mHYRmyU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>243674717073</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hornblasters.hornblasters</string>
+	<key>PROJECT_ID</key>
+	<string>hornblasters-fe4c4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hornblasters-fe4c4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:243674717073:ios:21032fc8be704b29a4d830</string>
+</dict>
+</plist>
