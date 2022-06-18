@@ -38,9 +38,9 @@ dependencies:
   url_launcher: ^6.0.20
   webview_flutter: ^3.0.4
   firebase_core:
-  firebase_auth:
   cloud_firestore:
   video_player: ^2.4.4
+  web_scraper: ^0.1.4
 
 dev_dependencies:
   flutter_test:

@@ -37,7 +37,7 @@ class VideosPics extends StatelessWidget {
               Expanded(
                   child: Column(
                     children: [
-                      Expanded(
+                      controller.data.value.length == 0 ? Container(height : 50 , width : 50 ,child: CircularProgressIndicator()) : Expanded(
                         child: GridView.count(
                           crossAxisCount: 3,
                           childAspectRatio: (70 / 100),
@@ -92,7 +92,7 @@ class VideosPics extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(20),
                                                   image: DecorationImage(
-                                                    image: NetworkImage(controller.data[i]['uri']),
+                                                    image: NetworkImage(controller.data[i]['type'] == 'image' ? controller.data[i]['uri'] : 'http://www.milhouses.com.eg/dar/imgs/video.jpg'),
                                                     fit: BoxFit.cover,
                                                   ),
                                                   color: P5

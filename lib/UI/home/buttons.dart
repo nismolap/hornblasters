@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hornblasters/UI/constants.dart';
 import 'package:hornblasters/UX/home_controller.dart';
+import 'package:hornblasters/UX/horn_sounds_controller.dart';
 import 'package:hornblasters/UX/videos_pics_controller.dart';
 import 'package:hornblasters/UX/webview_controller.dart';
 
@@ -11,6 +12,7 @@ class Buttons extends StatelessWidget {
   HomeController controller = Get.put(HomeController());
   WebviewController webview = Get.put(WebviewController());
   VideosPicsController pic = Get.put(VideosPicsController());
+  HornSoundsController horn = Get.put(HornSoundsController());
 
   Buttons({Key? key}) : super(key: key);
 
@@ -41,7 +43,8 @@ class Buttons extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () {
-              Get.toNamed('HornSounds');
+              // Get.toNamed('HornSounds');
+              horn.ttest();
             },
             style: ElevatedButton.styleFrom(
                 padding:
