@@ -41,6 +41,7 @@ dependencies:
   cloud_firestore:
   video_player: ^2.4.4
   web_scraper: ^0.1.4
+  audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:

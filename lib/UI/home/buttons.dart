@@ -43,8 +43,11 @@ class Buttons extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () {
-              // Get.toNamed('HornSounds');
-              horn.ttest();
+              horn.title_links.value.clear();
+              horn.images.value.clear();
+              horn.audios.value.clear();
+              horn.getdata();
+              Get.toNamed('HornSounds');
             },
             style: ElevatedButton.styleFrom(
                 padding:
