@@ -18,11 +18,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     initPlatformState();
-    Timer(const Duration(seconds: 3), () async{
+    Timer(const Duration(seconds: 3), () async {
       Get.offNamed('/HomeScreen');
     });
   }
-
 
   Future<void> initPlatformState() async {
     OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
@@ -32,14 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
     });
 
     OneSignal.shared.setNotificationWillShowInForegroundHandler(
-            (OSNotificationReceivedEvent event) {
-
-        });
+        (OSNotificationReceivedEvent event) {});
 
     await OneSignal.shared.setAppId("88880d31-d75a-4b86-81c2-471ae6038938");
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -59,22 +54,27 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text('HB',style: TextStyle(
-                      fontFamily: 'GaleanaCondensed',
-                        fontSize: 184,
-                        color: P5
-                    ),)
-                  ],
-                ),
-              ],
-            ),),
-            Expanded(child: Column(
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'HB',
+                        style: TextStyle(
+                            fontFamily: 'GaleanaCondensed',
+                            fontSize: 184,
+                            color: P5),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+                child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(

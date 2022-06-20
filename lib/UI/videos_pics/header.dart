@@ -9,6 +9,7 @@ class HeaderV extends StatelessWidget {
   WebviewController webview = Get.put(WebviewController());
 
   HeaderV({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,12 +30,18 @@ class HeaderV extends StatelessWidget {
               onPressed: () {
                 Get.back();
               },
-              icon : const Icon(Icons.arrow_back,color: P3,size: 35,),
+              icon: const Icon(
+                Icons.arrow_back,
+                color: P3,
+                size: 35,
+              ),
             ),
           ),
           Container(
             margin: EdgeInsets.only(right: 90),
-            child: Text('Videos & Pics',textAlign: TextAlign.center,
+            child: Text(
+              'Videos & Pics',
+              textAlign: TextAlign.center,
               style: const TextStyle(
                 fontFamily: 'Montserrat',
                 color: P5,

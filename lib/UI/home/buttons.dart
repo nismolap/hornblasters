@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, deprecated_member_use
+// ignore_for_file: must_be_immutable, deprecated_member_use, invalid_use_of_protected_member
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -120,10 +120,10 @@ class Buttons extends StatelessWidget {
               Get.toNamed('VideosPics');
               pic.data.clear();
               pic.getdata();
-              },
+            },
             style: ElevatedButton.styleFrom(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 primary: Colors.transparent,
                 shadowColor: Colors.transparent,
                 onPrimary: P2,
@@ -189,11 +189,11 @@ class Buttons extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () {
-              webview.webview(controller.SHOP_NOW,'SHOP NOW');
-              },
+              webview.webview(controller.SHOP_NOW, 'SHOP NOW');
+            },
             style: ElevatedButton.styleFrom(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 primary: Colors.transparent,
                 shadowColor: Colors.transparent,
                 onPrimary: P2,
@@ -237,7 +237,6 @@ class Buttons extends StatelessWidget {
             ),
           ),
         ),
-
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
@@ -260,11 +259,12 @@ class Buttons extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () {
-              webview.webview(controller.DEALER_INSTALLER_LOCATOR,'DEALER / INSTALLER\nLOCATOR');
+              webview.webview(controller.DEALER_INSTALLER_LOCATOR,
+                  'DEALER / INSTALLER\nLOCATOR');
             },
             style: ElevatedButton.styleFrom(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 primary: Colors.transparent,
                 shadowColor: Colors.transparent,
                 onPrimary: P2,
@@ -279,13 +279,14 @@ class Buttons extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Text(
-                      'DEALER / INSTALLER\nLOCATOR',textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        color: P2,
-                        fontSize: 14.0,
-                      ),
+                        'DEALER / INSTALLER\nLOCATOR',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          color: P2,
+                          fontSize: 14.0,
                         ),
+                      ),
                     ],
                   ),
                 ),
@@ -308,7 +309,6 @@ class Buttons extends StatelessWidget {
             ),
           ),
         ),
-
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
@@ -331,11 +331,11 @@ class Buttons extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () {
-              webview.webview(controller.HELP_CENTER,'HELP CENTER');
+              webview.webview(controller.HELP_CENTER, 'HELP CENTER');
             },
             style: ElevatedButton.styleFrom(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 primary: Colors.transparent,
                 shadowColor: Colors.transparent,
                 onPrimary: P2,
@@ -379,8 +379,6 @@ class Buttons extends StatelessWidget {
             ),
           ),
         ),
-
-
       ],
     );
   }

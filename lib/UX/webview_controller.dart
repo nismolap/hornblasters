@@ -3,16 +3,16 @@
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class WebviewController extends GetxController{
+class WebviewController extends GetxController {
+  final url = ''.obs;
 
-  final url = ''.obs ;
-  final title = ''.obs ;
-  late WebViewController controller ;
+  final title = ''.obs;
 
-  void webview(uri,titl){
-    url.value = uri ;
-    title.value = titl ;
+  late WebViewController controller;
+
+  void webview(uri, titl) {
+    url.value = uri;
+    title.value = titl;
     Get.toNamed('WebView');
   }
-
 }

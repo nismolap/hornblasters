@@ -1,6 +1,5 @@
 // ignore_for_file: depend_on_referenced_packages
 
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hornblasters/UI/constants.dart';
@@ -8,10 +7,7 @@ import 'package:hornblasters/UI/webview/header.dart';
 import 'package:hornblasters/UX/webview_controller.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-
 class WebViewP extends StatefulWidget {
-
-
   const WebViewP({Key? key}) : super(key: key);
 
   @override
@@ -49,22 +45,21 @@ class _WebViewPState extends State<WebViewP> {
             HeaderW(),
             Expanded(
                 child: Column(
-                  children: [
-                    Expanded(
-                      child: WebView(
-                        javascriptMode: JavascriptMode.unrestricted,
-                        initialUrl: webview.url.value,
-                        onWebViewCreated: (WebViewController webViewController) {
-                          webview.controller = webViewController;
-                        },
-                      ),
-                    )
-                  ],
-                ))
+              children: [
+                Expanded(
+                  child: WebView(
+                    javascriptMode: JavascriptMode.unrestricted,
+                    initialUrl: webview.url.value,
+                    onWebViewCreated: (WebViewController webViewController) {
+                      webview.controller = webViewController;
+                    },
+                  ),
+                )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
