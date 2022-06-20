@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hornblasters/UI/constants.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,11 +17,29 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
+    initPlatformState();
     Timer(const Duration(seconds: 3), () async{
       Get.offNamed('/HomeScreen');
     });
   }
+
+
+  Future<void> initPlatformState() async {
+    OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
+    OneSignal.shared
+        .setNotificationOpenedHandler((OSNotificationOpenedResult result) {
+      debugPrint('NOTIFICATION OPENED HANDLER CALLED WITH: $result');
+    });
+
+    OneSignal.shared.setNotificationWillShowInForegroundHandler(
+            (OSNotificationReceivedEvent event) {
+
+        });
+
+    await OneSignal.shared.setAppId("88880d31-d75a-4b86-81c2-471ae6038938");
+  }
+
+
 
   @override
   Widget build(BuildContext context) {

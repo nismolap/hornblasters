@@ -5,6 +5,7 @@ import 'package:hornblasters/UI/home/home.dart';
 import 'package:hornblasters/UI/horn_sounds/horn_sounds.dart';
 import 'package:hornblasters/UI/videos_pics/videos_pics.dart';
 import 'package:hornblasters/UI/webview/webview.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'UI/splashscreen/splashscreen.dart';
 
 void main() async{
@@ -16,9 +17,15 @@ void main() async{
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+
+
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+
+
+
+
+      return GetMaterialApp(
       getPages: [
         GetPage(name: '/SplashScreen', page: () => const SplashScreen()),
         GetPage(name: '/HomeScreen', page: () => const HomeScreen()),

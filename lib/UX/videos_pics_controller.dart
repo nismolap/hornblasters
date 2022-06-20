@@ -36,7 +36,7 @@ class VideosPicsController extends GetxController{
   void dialog(type , url , i){
     Get.defaultDialog(
       title: '',
-      barrierDismissible: true,
+      barrierDismissible: false,
       content: Column(
         children: [
           Container(
@@ -66,7 +66,7 @@ class VideosPicsController extends GetxController{
 
           ),
           Container(
-            width: 330,
+            width: 300,
             height: 40,
             child: FlatButton(
               shape: RoundedRectangleBorder(
@@ -75,6 +75,25 @@ class VideosPicsController extends GetxController{
               onPressed: () {webview.webview(url,'Videos & Pics');},
               child: Text(
                 'Shop Now',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: P5,
+                  fontSize: 22.0,
+                ),
+              ),
+            ),
+          ),
+          Container(height: 10,),
+          Container(
+            width: 300,
+            height: 40,
+            child: FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              color: Colors.red,
+              onPressed: () {Get.back();controller!.pause();},
+              child: Text(
+                'Cancel',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: P5,

@@ -42,10 +42,20 @@ dependencies:
   video_player: ^2.4.4
   web_scraper: ^0.1.4
   audioplayers: ^0.20.1
+  onesignal_flutter: ^3.3.2
+  flutter_launcher_icons: ^0.9.3
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon1.png"
+  adaptive_icon_background: "#077CFB"
+  adaptive_icon_foreground: "assets/images/icon1.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

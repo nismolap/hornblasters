@@ -99,7 +99,7 @@ class HornSounds extends StatelessWidget {
                                               children: [
                                                 Container(height: 5,),
                                                 Text(
-                                                  '${controller.title_links.value[i]['title']}00000000',
+                                                  '${controller.title_links.value[i]['title']}',
                                                   textAlign: TextAlign.center,
                                                   style: TextStyle(
                                                     fontFamily: 'Montserrat',
