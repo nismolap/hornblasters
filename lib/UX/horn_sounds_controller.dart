@@ -21,9 +21,6 @@ class HornSoundsController extends GetxController{
         images.value = elements2 ;
         title_links.value = elements3 ;
       }
-      print(audios.value);
-      print(images.value);
-      print(title_links.value);
     }
 
 
