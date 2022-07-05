@@ -50,7 +50,7 @@ class HornSounds extends StatelessWidget {
                         Expanded(
                           child: GridView.count(
                             crossAxisCount: 3,
-                            childAspectRatio: (59 / 100),
+                            childAspectRatio: (60 / 100),
                             children: List.generate(
                                 controller.images.value.length, (i) {
                               final audioplayer = AudioPlayer();
@@ -61,7 +61,7 @@ class HornSounds extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Expanded(
-                                      flex: 2,
+                                      flex: 3,
                                       child: Container(
                                         decoration: BoxDecoration(
                                             borderRadius: BorderRadius.only(
@@ -70,7 +70,7 @@ class HornSounds extends StatelessWidget {
                                             image: DecorationImage(
                                               image: NetworkImage(
                                                   '${controller.images.value[i]['attributes']['src']}'),
-                                              fit: BoxFit.cover,
+                                              fit: BoxFit.fill,
                                             ),
                                             color: P5),
                                       ),
@@ -132,7 +132,7 @@ class HornSounds extends StatelessWidget {
                                                             fontFamily:
                                                                 'Montserrat',
                                                             color: P5,
-                                                            fontSize: 11.0,
+                                                            fontSize: 9.0,
                                                           ),
                                                         ),
                                                         GetBuilder<
@@ -175,12 +175,12 @@ class HornSounds extends StatelessWidget {
                                                                         : Icons
                                                                             .pause,
                                                                     color: P5,
-                                                                    size: 40,
+                                                                    size: 30,
                                                                   )),
                                                         ),
                                                         Container(
-                                                          width: 62,
-                                                          height: 35,
+                                                          width: 58,
+                                                          height: 32,
                                                           margin:
                                                               const EdgeInsets
                                                                       .only(

@@ -88,7 +88,7 @@ class VideosPics extends StatelessWidget {
                                                   style: const TextStyle(
                                                     fontFamily: 'Montserrat',
                                                     color: P5,
-                                                    fontSize: 18.0,
+                                                    fontSize: 12.0,
                                                   ),
                                                 ),
                                               ]),
@@ -112,7 +112,8 @@ class VideosPics extends StatelessWidget {
                                                           'image'
                                                       ? controller.data[i]
                                                           ['uri']
-                                                      : 'http://www.milhouses.com.eg/dar/imgs/video.jpg'),
+                                                      : controller.data[i]
+                                                  ['thm']),
                                                   fit: BoxFit.cover,
                                                 ),
                                                 color: P5),

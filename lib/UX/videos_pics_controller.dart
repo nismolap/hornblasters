@@ -39,8 +39,32 @@ class VideosPicsController extends GetxController {
       barrierDismissible: false,
       content: Column(
         children: [
+          Row(
+            children: [
+              Container(
+                width: 40,
+                height: 35,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
+                  onPressed: () {
+                    Get.back();
+                    controller!.pause();
+                  },
+                  icon: const Icon(
+                    Icons.cancel_rounded,
+                    color: Colors.red,
+                    size: 35,
+                  ),
+                ),
+              ),
+            ],
+          ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             child: type == 'image'
                 ? Image(
                     image: NetworkImage('${data.value[i]['uri']}'),
@@ -78,30 +102,6 @@ class VideosPicsController extends GetxController {
               },
               child: Text(
                 'Shop Now',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: P5,
-                  fontSize: 22.0,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            height: 10,
-          ),
-          Container(
-            width: 300,
-            height: 40,
-            child: FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0)),
-              color: Colors.red,
-              onPressed: () {
-                Get.back();
-                controller!.pause();
-              },
-              child: Text(
-                'Cancel',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: P5,

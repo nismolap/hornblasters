@@ -281,38 +281,16 @@ class HomeController extends GetxController {
                 onPrimary: P3,
               ),
               child: const Text(
-                'Call Toll Free',
+                '+1-877-209-8179',
                 style: TextStyle(
                     fontStyle: FontStyle.italic,
                     color: P5,
-                    fontSize: 25.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.w800),
               ),
             ),
           ),
-          //International
-          Container(
-            width: 200,
-            margin: const EdgeInsets.symmetric(vertical: 5),
-            child: ElevatedButton(
-              onPressed: () async {
-                launch(International);
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(10),
-                primary: P2,
-                onPrimary: P3,
-              ),
-              child: const Text(
-                'International',
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: P5,
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.w800),
-              ),
-            ),
-          ),
+
         ],
       ),
       backgroundColor: Colors.white,

@@ -75,7 +75,7 @@ class Footer extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                           )),
                       child: const Text(
-                        'Phone Number',
+                        'Call HornBlasters',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           color: P5,
