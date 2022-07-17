@@ -14,14 +14,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-    Timer(const Duration(seconds: 3), () async {
-      Get.offNamed('/HomeScreen');
-    });
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   initPlatformState();
+  //   Timer(const Duration(seconds: 3), () async {
+  //     Get.offNamed('/HomeScreen');
+  //   });
+  // }
 
   Future<void> initPlatformState() async {
     OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
@@ -60,14 +60,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'HB',
-                        style: TextStyle(
-                            fontFamily: 'GaleanaCondensed',
-                            fontSize: 184,
-                            color: P5),
-                      )
+                    children: [
+                      Expanded(child: Container(),flex: 1,),
+                      Expanded(child: Container(
+                        child: Image(
+                          image: AssetImage('assets/images/HB_Badge.png'),
+                        ),
+                      ),flex: 5,),
+                      Expanded(child: Container(),flex: 1,),
                     ],
                   ),
                 ],
