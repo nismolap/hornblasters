@@ -49,15 +49,15 @@ class HornSounds extends StatelessWidget {
                       children: [
                         Expanded(
                           child: GridView.count(
-                            crossAxisCount: 3,
-                            childAspectRatio: (60 / 100),
+                            crossAxisCount: 2,
+                            childAspectRatio: (80 / 100),
                             children: List.generate(
                                 controller.images.value.length, (i) {
                               final audioplayer = AudioPlayer();
                               bool isplaying = false;
                               return Container(
                                 margin: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 10),
+                                    horizontal: 10, vertical: 10),
                                 child: Column(
                                   children: [
                                     Expanded(

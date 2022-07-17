@@ -14,14 +14,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   initPlatformState();
-  //   Timer(const Duration(seconds: 3), () async {
-  //     Get.offNamed('/HomeScreen');
-  //   });
-  // }
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+    Timer(const Duration(seconds: 3), () async {
+      Get.offNamed('/HomeScreen');
+    });
+  }
 
   Future<void> initPlatformState() async {
     OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);

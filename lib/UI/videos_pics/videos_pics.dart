@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hornblasters/UI/constants.dart';
 import 'package:hornblasters/UI/horn_sounds/header.dart';
+import 'package:hornblasters/UI/videos_pics/header.dart';
 import 'package:hornblasters/UX/videos_pics_controller.dart';
 
 class VideosPics extends StatelessWidget {
@@ -37,7 +38,7 @@ class VideosPics extends StatelessWidget {
               Container(
                 height: 20,
               ),
-              HeaderH(),
+              HeaderV(),
               Expanded(
                   child: Column(
                 children: [

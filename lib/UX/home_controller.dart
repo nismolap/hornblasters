@@ -29,7 +29,7 @@ class HomeController extends GetxController {
   final Snapchat = 'https://www.snapchat.com/add/hornblasters';
 
   //Phone Number
-  final Call_Toll_Free = 'tel:+1-877-209-8179';
+  final Call_Toll_Free = 'tel:+1-813-783-8058';
 
   final International = 'tel:+1-813-783-8058';
 
@@ -263,7 +263,7 @@ class HomeController extends GetxController {
 
   void call_toll_free() {
     Get.defaultDialog(
-      title: 'Follow Us',
+      title: 'Call Us',
       barrierDismissible: true,
       content: Column(
         children: [
@@ -281,7 +281,7 @@ class HomeController extends GetxController {
                 onPrimary: P3,
               ),
               child: const Text(
-                '+1-877-209-8179',
+                '+1-813-783-8058',
                 style: TextStyle(
                     fontStyle: FontStyle.italic,
                     color: P5,
